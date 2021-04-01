@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+<form method="get" action="">
+		<p>라디오 버튼(Radio Button)</p>
+		<input type="radio" name ="chk_info" value="C">C
+		<input type="radio" name ="chk_info" value="HTML">HTML
+		<input type="radio" name="chk_info" value="CSS">CSS
+		<input type="radio" name="chk_info" value="JAVA">JAVA
+		<input type="radio" name="chk_info" value="Javascript">Javascript
+		<input type="radio" name="chk_info" value="Android">Android
+		<br></br>
+		
+		<input type="radio" name ="chk_info" value="C">C
+		<input type="radio" name ="chk_info" value="HTML">HTML
+		<input type="radio" name="chk_info" value="CSS">CSS
+		<input type="radio" name="chk_info" value="JAVA" checked="checked">JAVA
+		<input type="radio" name="chk_info" value="Javascript">Javascript
+		<input type="radio" name="chk_info" value="Android">Android
+		<br></br>
+		
+		<hr>
+		
+		<p>체크박스(Check box)</p>
+		<input type="checkbox" name="chk_info" value="C">C
+		<input type="checkbox" name="chk_info" value="HTML">HTML
+		<input type="checkbox" name="chk_info" value="JAVA">JAVA
+		<input type="checkbox" name="chk_info" value="Javascript">JavaScript
+		<input type="checkbox" name="chk_info" value="Android">Android
+
+				<br></br>
+		
+		<input type="checkbox" name="chk_info" value="C">C
+		<input type="checkbox" name="chk_info" value="HTML">HTML
+		<input type="checkbox" name="chk_info" value="JAVA" checked="checked">JAVA
+		<input type="checkbox" name="chk_info" value="Javascript">JavaScript
+		<input type="checkbox" name="chk_info" value="Android" checked="checked">Android
+	</form>
+	
+	<p>리셋버튼</p>
+	<form name="input" method="post" action="">
+		<input type="text" name="memberName" maxlength="10">
+		<input type="reset" value="초기화">
+	</form>
+
+	<hr>
+	
+	<p>전송버튼(Submit Button)</p>
+	<form name="inputsend" method="post" action="">
+		<input type="text" name="memberNick" maxlength="10">
+		<input type="submit" value="전송">
+	</form>
+	
+	
+	<p>이미지 버튼(Image Button)</p>
+	<form name="imagetype" method="get" action="">
+		<input type="image" src="submit.jpg" width="100">
+	</form>
+	
+	<p>첨부파일 버튼(File Form)</p>
+	<form name="formfile" method="post" action="" enctype="multipart/form-data">
+	<input type="file" name="fileName">
+	</form>
+	
+	<p>파일첨부</p>
+	<form name="formfile2" method="post" action="" enctype="multipart/form-data">
+	<input type="file" name="selctedFile">
+	<input type="submit" value="제출">
+	</form>
+	
+	<hr>
+	
+	<form name="formfield" method="get" action="">
+	<p>히든 필드(Hidden Field)</p>
+	<input type="hidden" name="UserIp" value="<?echo $REMOTE_ADDR?>">
+	<input type="hidden" name="UserLebel" value="VVIP">
+	
+	<hr>
+	
+	<p>레이블 요소(label element)</p>
+		<p>당신이 좋아하는 언어는</p>
+	<label for="c">C</label><input  type="checkbox" name="checklong" id="c">
+	<label for="html">HTML</label><input type="checkbox" name="checklong" id="html">
+	<label for="java">JAVA</label><input type="checkbox" name="checklong" id="java">
+	<label for="css">CSS</label><input type="checkbox" name="checklong" id="css">
+	<label for="javascript">JavaScript</label><input type="checkbox" name="checklong" id="javascript">
+	<label for="android">Android</label><input type="checkbox" name="checklong" id="android">
+	<label for="etc">기타</label><input type="checkbox" name="text" id="etc">
+	
+	
+	<p>성별선택</p>
+	<label for="male">남자</label><input type="radio" name="gender" id="male" value="man"><br>
+	<label for="female">여자</label><input type="radio" name="gender" id="female" value="woman">
+	</form>
+	
+	<hr>
+	
+	<p>자동 완성 기능(autocomplete)</p>
+	<form name="autocompleteform" method="post" action=""autocomplete="on">
+	First Name:<input type="text" name="fname"><br>
+	Last Name:<input type="text" name="lname"><br>
+	
+	e-mail:<input type="email" name="email" autocomplete="off"><br>
+	
+	<input type="submit">
+	
+	</form>
+</body>
+</html>
