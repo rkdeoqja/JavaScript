@@ -1,0 +1,8 @@
+@charset "EUC-KR";
+body{
+	color:#ff0000;
+	
+}
+#pc_view{
+	display:none;
+}
