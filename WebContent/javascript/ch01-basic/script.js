@@ -1,0 +1,1 @@
+document.write("script.js파일에 있는 코드를 실행하였습니다.<br>");
