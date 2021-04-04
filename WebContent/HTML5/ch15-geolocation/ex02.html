@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script type="text/javascript">
+var watchId;
+window.onload = function(){
+	if(navigator.geolocation == undefined){
+		alert("본 기기에서는 위치정보를 지원하지 않습니다.")
+	}
+	
+	navigator.geolocation.getCurrentPosition(
+		success,fail,{timeout:10000});	
+	function success(position){
+		document.getElementById("startlat").innerHTML = position.coords.latitude;
+		document.getElementById("startlon").innerHTML = position.coords.longitude;
+	}
+	
+	function fail(error){
+		alert("발생 에러코드: "+error.code);
+		
+	}
+	
+	watchId = navigator.geolocation.watchPosition(function(position){
+		var lat =position.coords.latitude;
+		var lon = position.coords.longitude;
+		var acc=position.coords.accuracy;
+		
+		document.getElementById("currentlat").innerHTML=lat;
+		document.getElementById("currentlon").innerHTML=lon;
+		document.getElementById("acc").innerHTML=acc;
+	});
+	var btn = document.getElementById("btn");
+		
+	btn.addEventListener("click",locClear,false);
+	
+	function locClear(){
+		navigator.geolocation.clearWatch(watchId);
+		alert("위치 추적이 해제됨");
+		
+	}
+}
+
+
+</script>
+</head>
+<body>
+	시작위치(위도, 경도):<br>
+	<span id="startlat">위도: </span>&deg;<br>
+	<span id="startlon">경도: </span>&deg;
+	
+	<br><br>
+	현재위치(위도, 경도):<br>
+	<span id="currentlat">위도: </span>&deg;<br>
+	<span id="currentlon">경도: </span>&deg;
+	
+	<br><br>
+	<span id="acc">정확도</span>미터 정도의 정확도를 보여줍니다.
+	
+	<br><br>
+	<button id="btn">위치 추적 해제</button>
+	
+	
+</body>
+</html>

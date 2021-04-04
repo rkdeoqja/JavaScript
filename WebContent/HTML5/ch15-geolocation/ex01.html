@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body onload="getLocation()">
+	<p id="geodemo"></p>
+	
+	<script type="text/javascript">
+	var x=document.getElementById("geodemo");
+	
+	function getLocation(){
+		
+		if(navigator.geolocation){
+			navigator.geolocation.getCurrentPosition(showPosition);
+		}else{
+			x.innerHTML = "브라우저에서 geolocation을 지원하지 않습니다.";
+		}
+		
+	}
+	
+	function showPosition(position){
+		x.innerHTML = "Latitude: "+ position.coords.latitude
+		+"<br>Longitude: "+position.coords.longitude;
+	}
+	
+	</script>
+</body>
+</html>
