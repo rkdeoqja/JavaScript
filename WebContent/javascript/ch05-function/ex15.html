@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function test1(){
+	 var i =10;//지역변수	
+	document.write("함수 안에서 i : "+i+"<br>");
+	}
+	
+	test1();
+	
+// 	document.write("함수 종료후 i호출한 경우 : "+ i +"<br>");
+	
+	var j;//전역변수
+	function test2(){
+		j=200;
+		
+		document.write("함수 안에서 j : "+j+"<br>");
+	}
+	
+	test2();
+	
+	document.write("함수 종료후 j를 호출한 경우 : "+j+"<br>");
+	
+	function test3(){
+		j=200;
+		document.write("test3함수에서 j : "+j+"<br>");
+		
+	}
+	
+	test3();
+	
+	function test4(){
+		m=40;//권장 하지 않음
+		document.write("함수 안에서 m : "+m+"<br>");
+	}
+	test4();
+	document.write("함수 밖에서 m을 호출한 경우 : "+m+"<br>");
+	
+	n=50;//권장하지 않음
+	function test5(){
+		document.write("함수 안에서 n : "+n+"<br>");
+		
+	}
+	test5();
+	document.write("함수 밖에서 n을 호출한 경우 : "+n+"<br>");
+	
+// 	p;
+	var p;
+	function test6(){
+		p=60;
+		document.write("함수 안에서 p : "+p+"<br>");
+		
+	}
+	
+	test6();
+	document.write("함수 밖에서 p을 호출한 경우 : "+p+"<br>");
+	
+// 	function test7(){                                 에러 발생
+// 		s;
+// 		s=70;
+// 		document.write("함수 안에서 s : "+s+"<br>");
+// 	}
+// 		test7();
+// 		document.write("함수 밖에서 s을 호출한 경우 : "+s+"<br>");
+	
+	
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

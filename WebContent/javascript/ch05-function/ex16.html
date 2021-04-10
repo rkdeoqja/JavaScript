@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script type="text/javascript">
+	var num =10;
+	
+	function globalNum1(){
+		var num=20;
+		
+		document.write("함수 내부에서 함수 num값 :"+num+"<br>");
+	}
+	
+	globalNum1();
+	document.write("함수 호출이 끝난 뒤 함수 num값 :"+num+"<br>");
+	
+	function globalNum2(){
+		var num=200;
+	
+		document.write("함수 내부에서 지역변수 num값 : "+num+"<br>");
+		
+		document.write("함수 외부의 전역변수 num값 :"+window.num+"<br>");
+	}
+	
+	globalNum2();
+	
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>
