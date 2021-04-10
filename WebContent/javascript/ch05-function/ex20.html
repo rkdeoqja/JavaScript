@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function sub(firstNum,...restArgs){
+		
+		for(var i=0;i<restArgs.length;i++){
+			firstNum -= restArgs[i];
+		}
+		return firstNum;
+	}
+	
+	document.write(sub(10,2,3)+"<br>");
+	
+	document.write(sub(10,1,5,7)+"<br>");
+	
+	
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

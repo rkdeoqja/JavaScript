@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function outerFunction(){
+		var x=123;
+		var y=789;
+		
+		function innerFunction(){
+			var y = 300;
+			var z = 369;
+			
+			document.write("x: "+x+"<br>");
+			document.write("y: "+y+"<br>");
+			document.write("z: "+z+"<br>");
+		}
+	
+		innerFunction();
+	}
+	
+	outerFunction();
+	
+	document.write("z: "+z+"<br>");
+	
+// 	innerFunction();
+	
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>
