@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+	function aaa(){
+		document.write("함수1 aaa<br>");
+	}
+	
+	function aaa(){
+		document.write("함수2 aaa<br>");
+		
+	}
+	
+	aaa();
+	
+	bbb();
+	
+	function bbb(){
+		document.write("함수 bbb<br>");		
+	}
+	
+	bbb();
+	
+	var ccc= function(){
+		document.write("함수1 ccc<br>");		
+	};
+	
+	var ccc= function(){
+		document.write("함수2 ccc<br>");		
+	}
+	
+	ccc();
+	
+	ddd();//익명함수는 함수 선언전에 함수를 호출하면 실행이 되지않고
+		  //선언적함수는 함수생성전에 함수를 호출해도 실행되어진다
+	
+	var ddd =function(){
+		document.write("함수 ddd<br>");
+		
+	};
+	ddd();
+	
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

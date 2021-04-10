@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function check1(){
+		
+		document.write("호출하면 동작됩니다.<br>");
+	}
+	
+	check1();
+	
+	function check2(msg){
+		
+		document.write(msg+"를(을) 좋아합니다.<br>");
+	}
+	
+	check2("사과");
+	
+	function check3(num){
+		
+		return num*num;
+		
+	}
+	
+	var number =check3(10);
+	document.write("number : "+number+"<br>");
+	
+	var fruit1 = function(){
+		document.write("과일을 좋아합니다.<br>");
+	};
+	
+	fruit1();
+	
+	var fruit2 =function(item){
+		
+		document.write(item+"을 너무 좋아합니다.<br>");
+	}
+	
+	fruit2('파인애플');
+	
+	var fruit3 =function(x,y){
+		return x+y;
+		
+	}
+	
+	var result = fruit3(3,7);
+	document.write("result:"+result+"<br>");
+	
+</script>
+</head>
+<body>
+	
+</body>
+</html>
