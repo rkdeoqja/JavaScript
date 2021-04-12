@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script type="text/javascript">
+	
+	function self(){
+		var a =10;
+		
+		document.write(a+"<br>")
+		
+		return function(){
+			var b = 20;
+			document.write(b+"<br>")
+		}; 
+		
+	}
+	
+	var self = self();
+	
+	self();
+	
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function f(){
+		var n=100;
+		
+		function g(){
+			
+			document.write("n : "+n+"<br>");
+			document.write("g() is called"+"<br>");
+		}
+		
+		return g;
+	}
+	
+	var result = f();
+	
+	document.write(result+"<br>");
+	// 클로저: 내부함수 사용시 지역변수를 남겨두는 현상
+	// 지역변수는 함수가 실행될때 생성되고 함수가 종료될 때 사라지지만
+	// 내부함수를 만들고 
+	// 내부함수를 감싸고 있는 함수의 지역변수를 내부함수에서 호출할 때
+	// 내부함수를 감싸고 있는 외부함수가 종료되었더라도 
+	// 내부함수에서 지역변수를 호출할 수 있도록 지역변수를 남겨주는 현상을 클로저라고 한다
+	
+	
+	//내부 함수 실행 
+	result();
+	
+	f()();
+	
+	
+	
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>
