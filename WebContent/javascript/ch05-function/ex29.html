@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script type="text/javascript">
+	
+	function outter(){
+		var a =10;
+		var b = 20;
+		
+		var inner=function (){
+			var b= 30;
+		
+			document.write(a+"<br>");
+			document.write(b+"<br>");
+		};
+		
+		return inner;
+	}
+	
+	var inn =outter();//outter메소드 안에 지역변수가 메소드 실행이 끝났는데도 
+	
+	inn();//inn메소드를 호출함으로 인해 지역변수가 살아있다 이현상을 클로저라고 한다
+	
+
+</script>
+</head>
+<body>
+	
+</body>
+</html>
