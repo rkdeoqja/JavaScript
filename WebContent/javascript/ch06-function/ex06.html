@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script type="text/javascript">
+	var URI ="http://www.naver.com?test=한글";
+	var output ='';
+	
+	output = escape(URI);
+	document.write(output+"<br>");
+	document.write(unescape(output)+"<br>")
+	
+	output = encodeURI(URI);
+	document.write(output+"<br>");
+	document.write(decodeURI(output)+"<br>");
+	
+	output = encodeURIComponent(URI);
+	document.write(output+"<br>");
+	document.write(decodeURIComponent(output)+"<br>");
+	
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

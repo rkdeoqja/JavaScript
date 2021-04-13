@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script type="text/javascript">
+	
+	var printIntervalID =setInterval(function(){
+		document.write("*");
+	},2000);
+	
+	setTimeout(function(){
+		clearInterval(printIntervalID);
+		document.write("종료");
+		
+	},20000);
+	
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>
