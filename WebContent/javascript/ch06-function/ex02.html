@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script type="text/javascript">
+	
+	var intervalID = setInterval(function(){
+	
+		document.write("1초간격"+"<br>");
+	},1000);
+	
+	
+	setTimeout(function(){
+		clearInterval(intervalID);
+		document.write("함수 반복 실행이 중단되었습니다."+"<br>")		
+	},7000);
+	
+	
+	
+	
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>
