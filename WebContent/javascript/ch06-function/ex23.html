@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script type="text/javascript">
+	
+	var thisObject = {
+		name:'Object1',
+		getName:function(){
+			document.write(this.name+"<br>");
+			
+		}
+			
+	};
+	
+	var otherObject ={
+		name:'Object2'
+	};
+	
+	otherObject.getName =thisObject.getName;
+	
+	thisObject.getName();
+	
+	otherObject.getName();
+	
+	
+	
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>
