@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script type="text/javascript">
+	var array1 =[1, 2, 3, 4, 5];
+	
+	document.write(array1+"<br>");
+	
+	document.write(array1[0]+"<br>");
+	document.write(array1[1]+"<br>");
+	document.write(array1[2]+"<br>");
+	document.write(array1[3]+"<br>");
+	document.write(array1[4]+"<br>");
+	
+	array1[5] = array1[0]+array1[1];
+	document.write(array1[5]+"<br>");
+	
+	//1인 인덱스를 가진 배열요소와 2인덱스를 가진 배열요소를 더한값을
+	//마지막 배열 요소에 추가
+	
+	array1[array1.length] = array1[1]+array1[2];
+	document.write(array1[6]+"<br>");
+	
+	array1.push('string');
+	
+	document.write(array1[7]+"<br>"); 
+	
+	
+	
+	
+	
+	
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>
