@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<style type="text/css">
+table{
+	border-collapse:collapse;
+}
+tr,td{
+	border:2px solid orange;
+	padding:5px;
+}
+
+</style>
+<script type="text/javascript">
+	var arr = [10,true,"javascript"];
+	
+	for(var i=0;i<arr.length;i++){
+		document.write(arr[i]+"<br>");
+	}
+	for(var i in arr){
+		document.write(arr[i]+"<br>");
+	}
+	
+	var result ="<table>";
+// 	var tr ="<tr>";
+// 	var td1 ="<td>"
+// 	var td2 ="</td>"
+	//1행 3열의 테이블을 만들어 주시기바랍니다
+	result+="<tr>";
+// 	document.write(result+tr+"<br>");
+	for(var i=0;i<arr.length;i++){
+		
+		result+="<td>"+arr[i]+"</td>";
+// 		document.write("<td>"+arr[i]+"</td>"+"<br>");
+// 		document.write(td1+arr[i]+td2+"<br>");
+	}
+	
+	result +="</tr>"
+	result +="</table>";
+	
+	document.write(result);
+// 	document.write(result+tr+td1+arr[0]+td2+"<br>");
+// 	document.write(td1+arr[1]+td2+"<br>");
+// 	document.write(td1+arr[2]+td2+"<br>");
+	
+
+
+</script>
+</head>
+<body>
+
+</body>
+</html>
