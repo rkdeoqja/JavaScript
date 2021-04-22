@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script type="text/javascript">
+	
+// 	var person1 ={
+// 			name:'홍길동',
+// 			play:function(){
+// 				alert('놀고 있습니다.');
+// 			}
+			
+// 	};
+	
+	
+// 	document.write(person1.play+"<br>");
+// 	person1.play();
+	
+// 	var person2={
+// 			name:'홍길동',
+// 			play:function(sports){
+// 				alert(sports+"를 하고 있습니다.");
+// 			}
+// 	};
+	
+// 	person2.play('축구');
+	
+// 	var person3 ={
+// 			name:"홍길동",
+// 			play:function(sports){
+// 				alert(name+"가 "+sports+"를 하고 있습니다.")
+// 			}
+// 	}
+	
+// 	person3.play("농구");
+	
+	var name ="김길동";
+	
+	var person4 ={
+			name:'홍길동',
+			play:function(sports){
+				
+				var name="최길동";
+				alert(window.name+"이(가)"+sports+"를 하고 있다.");
+				
+				alert(this.name+"이(가)"+sports+"를 하고 있다.");
+				
+				alert(name+"이(가)"+sports+"를 하고 있다.");
+			}
+	}
+	
+	person4.play("배구");
+</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script type="text/javascript">
+	
+	var product ={
+			name :'eclipse',
+			price :'3,000,000',
+			language:'english',
+			supportOS:'Linux',
+			subscription:true
+	}
+	var output ='';
+	
+	
+	for(var key in product){
+// 		document.write(key+" : ");
+// 		document.write(product.key+"<br>");
+// 		document.write(product[key]+"<br>");
+		
+		output += key+" : "+product[key]+"<br>";
+		
+		}
+	
+	document.write(output+"<br>");
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>
