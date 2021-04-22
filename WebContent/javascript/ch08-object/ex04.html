@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+	function Dog(color, name, age) {
+		this.color = color;
+		this.name = name;
+		this.age = age;
+	}
+
+	var myDog = Dog('회색', '알래스칸', 3);
+
+	myDog.family = "말라뮤트";
+
+	myDog.getInfo = function() {
+		return this.name + " " + this.color + " " + this.family + " "
+				+ this.age;
+	};
+	document.write(myDog.getInfo + "<br>");
+
+	document.write(myDog.color + "<br>");
+	document.write(myDog.name + "<br>");
+	document.write(myDog.age + "<br>");
+	document.write(myDog.family + "<br>");
+	
+	var yourDog = new Dog("검정색","초복이",2);
+	
+	document.write(yourDog.name+"<br>");
+	document.write(yourDog.color+"<br>");
+	document.write(yourDog.age+"<br>");
+	
+// 	document.write(yourDog.family+"<br>");
+// 	document.write(yourDog.getInfo()+"<br>");
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

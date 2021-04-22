@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function createCar(name,color,speed){
+
+		var carObj ={
+				name : name,
+				color : color,
+				speed :speed,
+				run :function(){
+					return this.speed +"km/h";
+				}
+		}
+	return carObj;
+	}
+	
+	var jaguar = createCar("JAGUAR","BLACK",220);
+	
+	document.write(jaguar.name+"<br>");
+	document.write(jaguar.color+"<br>");
+	document.write(jaguar.run()+"<br>");
+	document.write("<br>");
+	var bmw = createCar("BMW","white",180);
+	
+	document.write(bmw.name+"<br>");
+	document.write(bmw.color+"<br>");
+	document.write(bmw.run()+"<br>");
+	
+	console.log(jaguar);
+	console.log(bmw);
+	
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

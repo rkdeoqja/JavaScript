@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script type="text/javascript">
+	
+	function Dog(color,name,age){
+		this.color = color;
+		this.name = name;
+		this.age = age;
+	}
+	
+	Dog.prototype.family = "삽살개";
+	
+	Dog.prototype.getInfo = function(){
+		return this.name+" "+this.color+" "+this.family+" "+this.age;
+	};
+	
+	var myDog = new Dog("흰색","바둑이",1);
+	myDog.weight = "35";
+	
+	var yourDog = new Dog("검정색","댕댕이",2);
+	
+	var hisDog = new Dog("갈색","킹콩",3);
+	
+	document.write(myDog.name+"<br>");
+	document.write(myDog.color+"<br>");
+	document.write(myDog.age+"<br>");
+	document.write(myDog.weight+"<br>");
+	document.write(myDog.getInfo()+"<br>");
+	document.write("<br>");
+	
+	document.write(yourDog.name+"<br>");
+	document.write(yourDog.color+"<br>");
+	document.write(yourDog.age+"<br>");
+	document.write(yourDog.weight+"<br>");
+	document.write(yourDog.getInfo()+"<br>");
+	document.write("<br>");
+	
+	document.write(hisDog.name+"<br>");
+	document.write(hisDog.color+"<br>");
+	document.write(hisDog.age+"<br>");
+	document.write(hisDog.weight+"<br>");
+	document.write(hisDog.getInfo()+"<br>");
+	document.write("<br>");
+	
+	delete myDog.weight;
+	
+	document.write(myDog.weight+"<br>");
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>
