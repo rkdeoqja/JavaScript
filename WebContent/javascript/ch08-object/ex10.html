@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script type="text/javascript">
+	
+	var car = {
+			name:'Tumbler',
+			model:2005,
+			color:'darkred',
+			
+			company:{
+				name:'Wayne Enterprises',
+				ceo:'Bruce Wayne',
+				logo:'W',
+				Base:'Gotham City',
+				start:1979,
+				Employee:170000
+			},
+	
+			afterburner:function(){
+				document.write("애프터버너 가동-Reheat"+"<br>");
+			},
+			state:function(){
+				document.write(this.name+" is running..."+"<br>");
+			},
+			
+			reheat:function(speed){
+				document.write(this.name+" is running..."+speed+"<br>");
+			}
+	};
+	
+	document.write(car.company.name+"<br>");
+	
+	car.afterburner();
+	
+	car.state();
+	
+	//car가 가지고 있는 속성: 속성값
+	
+	for(var key in car){
+		document.write(key+" : "+car[key]+"<br>");
+		
+	}
+	
+	car.reheat('ultra fast');
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>
