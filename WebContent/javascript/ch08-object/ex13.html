@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script type="text/javascript">
+	
+	var member ={
+			name:'허준',
+			age:300,
+			phone:'010-12345-5678',
+			address:"경기도 수원"
+	};
+	
+	var output1 ="";
+	output1 += "name : "+member.name+"<br>";
+	output1 += "age : "+member.age+"<br>";
+	output1 += "phone : "+member.phone+"<br>";
+	output1 += "address : "+member.address+"<br>";
+	document.write(output1+"<br>");
+	
+	var output2="";
+	
+	with(member){
+		output2 += "name: "+name+"<br>";
+		output2 += "age: "+age+"<br>";
+		output2 += "phone: "+phone+"<br>";
+		output2 += "address: "+address+"<br>";
+	}
+
+	document.write(output2+"<br>");
+</script>
+</head>
+<body>
+
+</body>
+</html>
