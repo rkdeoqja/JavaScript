@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script type="text/javascript">
+	var student ={
+			
+	};
+	
+	student.name ="홍길동";
+	student.hobby ='피아노';
+	student.specialty='자바';
+	student.willjob ='프로그래머';
+	
+	
+	document.write(('specialty' in student)+"<br>");	
+	document.write(student.specialty+"<br>");
+	
+	var output='';
+	for(var key in student){
+		output +=key+" : "+student[key]+"<br>"; 
+	}
+	
+	document.write(output+"<br>");
+	
+	document.write("<br>");
+	document.write(student+"<br>");
+	document.write(student.toString()+"<br>");
+	
+	student.toString = function(){
+		var msg ='';
+		for(var key in this){
+			msg+= key+" : "+student[key]+"<br>"
+		}
+		return msg;
+	};
+	
+	document.write(student.toString()+"<br>");
+	
+	document.write("==============================<br>");
+	document.write(student+"<br>");
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>
