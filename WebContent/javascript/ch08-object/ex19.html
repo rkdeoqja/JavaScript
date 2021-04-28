@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function Human(name,age,sex){
+		this.name = name;
+		this.age = age;
+		this.sex = sex;
+	}
+	
+	var person = new Human('홍길동',27,'Male')
+	document.write((person instanceof Human)+"<br>");
+	document.write((person instanceof String)+"<br>");
+	document.write((person instanceof Number)+"<br>");
+	document.write((person instanceof Object)+"<br>");
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>
