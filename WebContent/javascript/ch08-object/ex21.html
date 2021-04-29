@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function Human(age){
+		this.age =age;
+	}
+	
+	Human.prototype.type ='인간';
+	
+	Human.prototype.getType = function(){
+		return this.type;
+	};
+	
+	Human.prototype.getAge = function(){
+		return this.age;
+	};
+	
+	
+	var human = new Human(27);
+	
+	console.dir(human);
+	
+	document.write(human.type+
+			"<br>");
+	document.write(human.age+"<br>");
+	document.write(human.getType()+"<br>");
+	document.write(human.getAge()+"<br>");
+	
+	document.write("<br>");
+	function Student(age){
+		this.age= age;
+	}
+	//상속
+	Student.prototype = Human.prototype;
+	
+	
+	
+	
+	var student = new Student(50);
+	
+	document.write(student.age+"<br>");
+	document.write(student.type+"<br>");
+	document.write(student.getType()+"<br>");
+	document.write(student.getAge()+"<br>");
+	
+	console.dir(student);
+	
+	document.write((student instanceof Student)+"<br>");
+	document.write((student instanceof Human)+"<br>");
+	document.write((student instanceof Object)+"<br>");
+	document.write((student instanceof Number)+"<br>");
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>
