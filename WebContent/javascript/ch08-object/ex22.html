@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function Parent(name){
+		this.name = name;
+		
+	}
+	
+	Parent.prototype.print = function(){
+		document.write("prototype에 새로운 메소드 print 추가" + "<br>");
+	};
+	
+	function Child(name){
+		this.name =name;
+	}
+	
+	Child.prototype = Parent.prototype;
+	
+	Child.prototype.say =function(){
+		return 'Javascript inheritance';
+	};
+	
+	var person = new Child('홍길동');
+	person.print();
+	document.write(person.say() + "<br>");
+	
+	console.dir(person);
+	console.dir(Parent);
+	console.dir(Child);
+	
+		
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>
