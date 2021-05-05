@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+	<h3>클래스(class)을 이용한 선택 방법</h3>
+	<p>첫 번째 단락</p>
+	<ul>
+		<li>첫 번째 아이템</li>
+		<li class="even">두 번째 아이템</li>
+		<li>세 번째 아이템</li>
+		<li class="even">네 번째 아이템</li>
+		<li>다섯 번째 아이템</li>
+
+	</ul>
+	<p>두 번째 단락</p>
+	<ul>
+		<li>첫 번째 아이템</li>
+		<li class="even">두 번째 아이템</li>
+		<li>세 번째 아이템</li>
+		<li class="even">네 번째 아이템</li>
+		<li>다섯 번째 아이템</li>
+
+	</ul>
+	<script type="text/javascript">
+		
+		var selectedItem = document.getElementsByClassName("even");
+		
+		for(var i=0;i<selectedItem.length;i++){
+			selectedItem.item(i).style.color="red";
+		}
+		
+		
+	
+	</script>
+</body>
+</html>
