@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+	<h3>CSS 선택자 (selector)을 이용한 선택 방법</h3>
+	<p class="odd">첫 번째 단락</p>
+	<ul>
+		<li class="odd">첫 번째 아이템</li>
+		<li>두 번째 아이템</li>
+		<li class="odd">세 번째 아이템</li>
+		<li>네 번째 아이템</li>
+		<li class="odd">다섯 번째 아이템</li>
+
+	</ul>
+	<p>두 번째 단락</p>
+	<ul>
+		<li class="odd">첫 번째 아이템</li>
+		<li>두 번째 아이템</li>
+		<li class="odd">세 번째 아이템</li>
+		<li>네 번째 아이템</li>
+		<li class="odd">다섯 번째 아이템</li>
+
+	</ul>
+	<script type="text/javascript">
+		
+		var selectedItem = document.querySelectorAll("li.odd");
+		
+		for(var i=0;i<selectedItem.length;i++){
+			selectedItem.item(i).style.color ="red";
+		}
+		
+	</script>
+</body>
+</html>
