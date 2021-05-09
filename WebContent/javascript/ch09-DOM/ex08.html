@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script type="text/javascript">
+	window.onload =function(){
+		
+		var spans =document.getElementsByTagName('span');
+		
+		for(var i=0;i<spans.length;i++){
+			if(i%2==1){
+				spans[i].innerHTML="덥고 추워"
+			}else{
+				spans[i].innerHTML="따뜻하고 시원해 "
+			}
+		}
+		
+	};
+</script>
+</head>
+<body>
+	<span>봄</span><br>
+	<span>여름</span><br>
+	<span>가을</span><br>
+	<span>겨울</span><br>
+</body>
+</html>
