@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script type="text/javascript">
+	window.onload =function(){
+		
+		var str = document.getElementsByClassName("matched");
+		
+		var output1='';
+		for(var i=0;i<str.length;i++){
+			output1+=str[i].innerHTML+'\n';
+		}
+		alert(output1);
+		
+		var str2 = document.getElementById('str');
+		var strMatched1 = str2.getElementsByClassName("matched");
+		
+		var output2 ='';
+		for(var i=0;i<strMatched1.length;i++){
+			output2+=strMatched1[i].innerHTML+'\n';
+		}
+		alert(output2);
+		
+		var strMatch2 = str2.getElementsByClassName("matched unmatched");
+		var output3='';
+		for(var i=0;i<strMatch2.length;i++){
+			output3+=strMatch2[i].innerHTML+"\n";
+		}
+		alert(output3);
+		
+		var num = document.getElementById('num');
+		var numMatch = num.getElementsByClassName('matched');
+		
+		var output4='';
+		for(var i=0;i<numMatch.length;i++){
+			output4+=numMatch[i].innerHTML+'\n';
+		}
+		alert(output4);
+	}
+</script>
+</head>
+<body>
+	<p id="str">
+		<span class="matched">m</span>
+		<span class="matched unmatched">mu</span>
+		<span class="matched">u</span>
+	</p>
+	<p id="num">
+		<span class="matched">1</span>
+		<span class="matched unmatched">13</span>
+		<span class="unmatched">1</span>
+	</p>
+</body>
+</html>
