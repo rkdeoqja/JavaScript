@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script type="text/javascript">
+	window.onload =function(){
+		var prev = document.getElementsByName('prev');
+		var next = document.getElementsByName('next');
+		
+		prev[0].innerHTML="이전";
+		next[0].innerHTML="다음";
+		
+		var country = document.getElementsByName('country');
+		
+		country[1].checked = true;
+		
+		var comment = document.getElementsByName('comment');
+		comment[0].value="간단한 설명 입력";
+	}
+</script>
+</head>
+<body>
+	<button name="prev">prev</button><br>
+	<button name="next">next</button><br>
+	
+	<input type="checkbox" name="country" value="대한민국">대한민국
+	<input type="checkbox" name="country" value="미국">미국
+	<input type="checkbox" name="country" value="중국">중국
+	<input type="checkbox" name="country" value="일본">일본
+	<input type="checkbox" name="country" value="프랑스" checked=true>프랑스
+	
+	<br>
+	
+	<input type="text" name="comment">
+</body>
+</html>
