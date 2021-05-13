@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script type="text/javascript">
+window.onload = function(){
+	var my = document.getElementById('my');
+	
+	var element=my.parentNode;
+	alert(element.id);
+	
+	element= my.firstChild;
+	alert(element.id);
+	<!-- 빈노드가 존재하여 undefined가 출력 -->
+	element= element.nextSibling;
+	alert(element.id);
+	
+	element = my.lastChild;
+	alert(element.id);
+	
+	element = element.previousSibling;
+	alert(element.id);
+	// 	var a = document.getElementById('a');
+};
+</script>
+</head>
+<body>
+	<div id=a>
+		<div id="b"></div>
+		<div id="my">
+		
+			<div id="c">
+				<div id="d"></div>
+			</div>
+			<div id='e'></div>
+		</div>
+		<div id='f'></div>
+		<div id='g'></div>
+	</div>
+
+</body>
+</html>
