@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script type="text/javascript">
+	window.onload = function(){
+		var my = document.getElementById("my");
+		
+		var children = my.childNodes;
+		
+// 		alert(children[0].id);
+// 		alert(children[1].id);
+// 		alert(children[2].id);
+// 		alert(children[3].id);
+// 		alert(children[4].id);
+
+		var element;
+		//my ->undefined
+		element = my.previousSibling.previousSibling;
+		alert(element.id);
+		//my->undefined
+		element = my.nextSibling.nextSibling;
+		alert(element.id);
+	}
+	
+</script>
+</head>
+<body>
+	<div id=a>
+		<div id="b"></div>
+		<div id="my">
+		
+			<div id="c">
+				<div id="d"></div>
+			</div>
+			<div id='e'></div>
+		</div>
+		<div id='f'></div>
+		<div id='g'></div>
+	</div>
+</body>
+</html>
