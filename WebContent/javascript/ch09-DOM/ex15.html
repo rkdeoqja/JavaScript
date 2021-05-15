@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script type="text/javascript">
+	window.onload = function(){
+		document.getElementById('document').innerHTML =
+			document.childNodes[1].nodeName;
+		
+		document.getElementById('html').innerHTML =
+			document.childNodes[1].childNodes[0].nodeName;
+	
+	}
+</script>
+</head>
+<body>
+	<h3>nodeName 프로퍼티</h3>
+	<p id="document"></p>
+	<p id="html"></p>
+</body>
+</html>
