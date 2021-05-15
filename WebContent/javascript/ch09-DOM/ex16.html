@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script type="text/javascript">
+window.onload = function(){
+	var headingText =
+	document.getElementById('heading').firstChild.nodeValue;
+	
+	
+	document.getElementById('text1').innerHTML =headingText;
+	
+	document.getElementById('text2').firstChild.nodeValue = headingText;
+
+}
+</script>
+</head>
+<body>
+	<h3 id="heading">nodeValue 프로퍼티</h3>
+	<p id="text1">텍스트</p>
+	<p id="text2">텍스트</p>
+</body>
+</html>
