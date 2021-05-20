@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+<body>
+	<h3>Web Programming</h3>
+	<h2 id="item">JSP</h2>
+	<div id="list">
+		<p>HTML</p>
+		<p id="criteria">CSS</p>
+		<p>JavaScript</p>
+		<p>JQuery</p>
+	</div>
+	<button onclick="appendNode()">노드 추가하기</button>
+	
+	<script type="text/javascript">
+	function appendNode(){
+		var parent = document.getElementById("list");
+		var criteraItem = document.getElementById("criteria");
+		var newItem = document.getElementById("item");
+		
+		parent.insertBefore(newItem, criteraItem);
+	}
+	
+	</script>
+
+
+	</script>
+
+
+</body>
+</html>
