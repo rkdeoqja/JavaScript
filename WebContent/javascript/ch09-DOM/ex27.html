@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script type="text/javascript">
+window.onload = function(){
+	
+}
+
+</script>
+</head>
+<body>
+	<h3>속성 이름을 이용한 속성값 변경</h3>
+	<a id="link" href="http://www.naver.com">네이버로 가기</a>
+	<br><br>
+	
+	<Button onclick="changeLink()">나의 블로그 가기</Button>
+	
+	<script type="text/javascript">
+	function changeLink(){
+		var link = document.getElementById("link");
+		link.href = "http://codedragon.tistory.com";
+		link.innerHTML="나의 블로그 가기 입니다.";
+	}
+	</script>
+</body>
+</html>
