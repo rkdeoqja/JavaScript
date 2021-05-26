@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+	<h3>텍스트노드의 데이터 교환</h3>
+	<p id="target">지금 시간은 오후 4시 입니다.</p>
+	<button onclick="changeText()">텍스트 교체하기</button>
+	
+	<script type="text/javascript">
+	var target =
+	document.getElementById('target').firstChild;
+	
+	function changeText(){
+		target.replaceData(7,4,"저녁 7");
+		
+	}
+	
+	</script>
+</body>
+</html>
