@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<style type="text/css">
+.target{
+background-color:orange;
+}
+</style>
+</head>
+<body>
+	<h3>속성 노드의 값 변경</h3>
+	<p>속성 노드의 값이 변경됩니다.</p>
+	<button onclick="changeAttribute()">속성 변경하기</button>
+	
+	<script type="text/javascript">
+	var para;
+	
+	function changeAttribute(){
+		//<p class="target">
+		document.getElementsByTagName('p')[0].setAttribute('class',"target");
+		
+	}
+	</script>
+</body>
+</html>
