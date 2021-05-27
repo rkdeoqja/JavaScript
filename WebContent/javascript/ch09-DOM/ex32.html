@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script type="text/javascript">
+window.onload = function(){
+	//<div></div>
+	var newNode = document.createElement('div');
+	//<div>겨울</div>
+	newNode.innerHTML='겨울';
+	
+	var oldNode =document.getElementById('season');
+	var parentNode = oldNode.parentNode;
+	
+	parentNode.replaceChild(newNode,oldNode);
+	
+};
+</script>
+
+</head>
+<body>
+	<p id="season">여름</p>
+</body>
+</html>
