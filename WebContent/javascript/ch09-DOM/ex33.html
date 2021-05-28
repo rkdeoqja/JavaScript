@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+	<h3>요소 노드 치환</h3>
+	<div id="parent">
+		<p id="first">div의 첫번째 p요소</p>
+		<p>div의 두번째 p요소</p>
+		
+	</div>
+	<p id="third">세번째 p요소</p>
+	<button onclick="changeNode()">요소 노드 치환하기</button>
+	<script type="text/javascript">
+	var parent = document.getElementById("parent");
+	var first = document.getElementById('first');
+	var third = document.getElementById('third');
+	
+	function changeNode(){
+		parent.replaceChild(third, first);
+	}
+	</script>
+</body>
+</html>
