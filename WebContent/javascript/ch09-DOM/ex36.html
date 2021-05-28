@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+	<p id="text" style="color:red; background-color:lemonchiffon;">클릭하면 단락의 속성이 제거됩니다</p>
+	<button onclick="remove()">속성 노드 삭제하기</button>
+	<button onclick="append()">속성 노드 추가하기</button>
+	
+	<script type="text/javascript">
+	
+	function remove(){
+		var text = document.getElementById('text');
+		
+		text.removeAttribute('style');
+	}
+// 	function append(){
+// 		var text = document.getElementById('text');
+		
+// 		text.appendAttribute('style')
+// 	}
+// 	안됨
+	
+	</script>
+</body>
+</html>
