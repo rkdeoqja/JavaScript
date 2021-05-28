@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+	<h3 id="item">Web Programming</h3>
+	<div id="list">
+		<p>HTML</p>
+		<p>CSS</p>
+		<p>JavaScript</p>
+		<p>JQuery</p>
+	</div>
+	<button onclick="cloneElement()">노드 복사하기</button>
+	
+	<script type="text/javascript">
+		function cloneElement(){
+			var parent = document.getElementById('list');
+			var originItem =document.getElementById('item');
+			
+			parent.appendChild(originItem.cloneNode(true));
+		}
+	</script>
+</body>
+</html>
