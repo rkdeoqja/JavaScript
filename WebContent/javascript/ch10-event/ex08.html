@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+	<p>addeventListener() 메소드</p>
+	<button id='btn'>텍스트 생성하기</button>
+	<h3 id='text'></h3>
+	
+	<script type="text/javascript">
+		
+	var showBtn = document.getElementById('btn');
+	
+	
+	function showText(){
+		document.getElementById('text').innerHTML ='텍스트가 나타났습니다';
+	}
+	
+	showBtn.addEventListener('click',showText);
+	</script>
+</body>
+</html>
