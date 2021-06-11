@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function test1(v){
+		if(v.value==''){
+			v.value=v.defaultValue;
+		}
+	}
+		
+	function test2(v){
+		if(v.value==v.defaultValue){}	
+		v.value='';
+	}
+	</script>
+</head>
+<body>
+	<form>
+		<textarea rows="10" cols="30" name="notice" 
+		onblur="test1(this)" onfocus="test2(this);">
+		클릭하면 글씨가 없어집니다
+		</textarea>
+	</form>
+	
+	
+</body>
+</html>
