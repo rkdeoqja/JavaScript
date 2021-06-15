@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function img1(path){
+		var bigImg = document.getElementById('bigImage');
+		bigImg.style.display='';
+		bigImg.src =path;
+		bigImg.width=500;
+		bigImg.height=350;
+		
+	}
+	function img2(){
+		var bigImg = document.getElementById('bigImage');
+		bigImg.style.display='none';
+	}
+
+</script>
+</head>
+<body>
+	<div>
+		<img src="Hydrangeas.jpg" width="90" style="cursor:pointer;"
+		onmouseover="img1('Hydrangeas.jpg')" onmouseout="img2()">
+		<img src="Tulips.jpg" width=90 style="cursor:pointer;"
+		onmouseover="img1('Tulips.jpg')" onmouseout="img2()">
+		
+		
+	</div>
+	<div>
+		<img id="bigImage" style="display:none;">
+	</div>
+	
+	
+</body>
+</html>
