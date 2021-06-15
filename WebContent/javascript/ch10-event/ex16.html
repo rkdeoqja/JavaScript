@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script type="text/javascript">
+window.onload =function(){
+	
+}
+
+</script>
+</head>
+<body>
+	<button onclick="startInterval()">2초 마다 현재시간을 표시하기</button>
+	<button onclick="cancleInterval()">시간 갱신 중지하기</button>
+	<p id ="date"></p>
+	
+	<script type="text/javascript">
+	
+	var timeoutId;
+	
+	function startInterval(){
+		timeoutId =setInterval(printCurrentDate,2000)
+	}
+	
+	function printCurrentDate(){
+		document.getElementById('date').innerHTML += new Date()+"<br>";
+	}
+	
+	function cancleInterval(){
+		clearInterval(timeoutId);
+// 		document.getElementById('date').innerHTML="";
+		
+	}
+	
+	
+	
+	</script>
+</body>
+</html>
