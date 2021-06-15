@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script type="text/javascript">
+window.onload = function(){
+	
+	var header = document.getElementById('header');
+	
+
+	function whenClick(){
+		alert('Click')
+	}
+	
+// 	header.onclick = whenClick();
+// 	header.onclick = whenClick;
+	header.onclick = function(){
+		alert('click');
+	}
+}
+
+</script>
+</head>
+<body>
+	<div id="header">클릭</div>
+</body>
+</html>
