@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script type="text/javascript">
+	window.onload = function(){
+		var num =1;
+		
+		var gallery = document.getElementById('gallery');
+		
+		document.getElementById('prev').onclick =function(){
+			num--;
+			if(num==0){
+				num=7;
+			}
+			console.log(num);
+			gallery.src="./img/img"+num+".jpg";
+		}
+		
+		document.getElementById('next').onclick =function(){
+			num++;
+			if(num==8){
+				num=1;
+			}
+			console.log(num);
+			gallery.src="./img/img"+num+".jpg";
+		}
+	
+	}
+</script>
+</head>
+<body>
+	<h1>이미지 넘기기</h1>
+	<p>
+		<img src="./img/left_btn.png" id="prev">
+		<img src="./img/img1.jpg" id=gallery>
+		<img src="./img/right_btn.png" id ='next'>
+	</p>
+	
+	
+	
+	
+	<script type="text/javascript">
+	
+	
+	</script>
+</body>
+</html>
