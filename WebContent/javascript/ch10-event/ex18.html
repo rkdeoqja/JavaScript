@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script type="text/javascript">
+window.onload =function(){
+	document.getElementById('content').onkeyup = function(){
+		var inputLength = this.value.length;
+		
+		var remain = 500 -inputLength;
+		document.getElementById('character').innerHTML = remain;
+	}
+	
+}
+
+</script>
+</head>
+<body>
+	<h3 id="character">500</h3>
+	<textarea row='10' cols='50' name='content' id='content'></textarea>
+</body>
+</html>
