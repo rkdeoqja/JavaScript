@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<style type="text/css">
+.clickme-before{
+background-color:red;
+color:blue
+}
+.clickme-after{
+background-color:blue;
+color:red;
+}
+
+</style>
+<script type="text/javascript">
+window.onload =function(){
+	var clickme = document.getElementById('clickme');
+	clickme.onclick =function(){
+		this.className=(this.className=='clickme-before')?'clickme-after':'clickme-before'
+	}
+}
+
+
+
+</script>
+</head>
+<body>
+	<div id="clickme" class="clickme-before">CLICK ME</div>
+</body>
+</html>
