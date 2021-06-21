@@ -1,0 +1,53 @@
+<!-- 버블링효과 -->
+<!DOCTYPE html> 
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<style type="text/css">
+#divBox{
+	width:100%;
+	height:120px;
+	border:2px solid red;
+}
+#pBox{
+	width:80%;
+	height:50px;
+	border:2px solid orange;
+}
+#spanBox{
+	border:2px solid blue;
+
+}
+
+</style>
+</head>
+<body>
+	<h3>이벤트 버블링(bubbling)전파</h3>
+	<div id='divBox'>divdiv
+		<p id='pBox'>ppp
+			<span id='spanBox'>spanspanspan</span>
+		</p>
+	</div>
+	<p id="text"></p>
+	
+	<script type="text/javascript">
+	document.getElementById('divBox').addEventListener('click',clickDiv,false);
+	document.getElementById('pBox').addEventListener('click',clickP,false);
+document.getElementById('spanBox').addEventListener('click',clickSpan,false);
+	function clickDiv(){
+		document.getElementById('text').innerHTML += 'div 요소 click!! <br>';
+	}
+	
+	function clickP(){
+		document.getElementById('text').innerHTML +='p 요소 click <br>';
+	}
+	
+	function clickSpan(){
+		document.getElementById('text').innerHTML +='span 요소 click <br>';
+	}
+
+	
+	</script>
+</body>
+</html>
