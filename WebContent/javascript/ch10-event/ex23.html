@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script type="text/javascript">
+window.onload = function(){
+
+	document.getElementById('header').onclick =function(){
+		alert('header');
+		this.style.background='blue';
+	};
+	
+	document.getElementById('paragraph').onclick =function(){
+		alert('paragraph');
+		this.style.background='yellow';
+		
+		event.cancelBubble = true;
+// 		var event =e || window.event;
+		
+// 		event.cancelBubble=true;
+		
+	};
+	
+	
+	
+	
+}
+</script>
+</head>
+<body>
+	<h1 id=header>header
+		<p id='paragraph'>paragraph</p>
+	</h1>
+	
+	
+	
+</body>
+</html>
