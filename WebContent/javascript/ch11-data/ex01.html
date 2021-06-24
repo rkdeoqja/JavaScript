@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script type="text/javascript">
+	var xmlDoc = null;
+	var x = null;
+	
+	if(window.ActiveXObject){
+		//IE용
+		xmlDoc = new ActiveXObject("Microsoft.XMLDOM");
+		xmlDoc.async = false;
+		xmlDoc.loadXML('myCompany.xml');
+	}else if(window.DOMParser){
+		//safari.Chrome
+		var xhttp = new XMLHttpRequest();
+		xhttp.open('GET','myCompany.xml',false);
+		xhttp.send();
+		xmlDoc = xhttp.responseXML;
+	}else if(document.implementation.createDocument){
+		//Mozilla, Firefox, Opera, 기타브라우저들
+		xmlDoc = document.implementation.createDocument('','',null);
+		xmlDoc.async = false;
+		xmlDoc.load('myCompany.xml');
+	}else{
+		alert('XML을 사용 하지 못하는 브라우저입니다.');
+	}
+	//document.getElementsByTagName()
+	x =xmlDoc.getElementsByTagName('member');
+	
+	for(var i=0;i<x.length;i++){
+		document.write(x[i].getElementsByTagName('part')[0].childNodes[0].nodeValue);
+		document.write(" : ");
+		document.write(x[i].getElementsByTagName('name')[0].childNodes[0].nodeValue);
+		document.write(" : ");
+		document.write(x[i].getElementsByTagName('teamno')[0].childNodes[0].nodeValue);
+		document.write(" : ");
+		document.write(x[i].getElementsByTagName('cellphone')[0].childNodes[0].nodeValue);
+		document.write(" : ");
+		document.write(x[i].getElementsByTagName('birth')[0].childNodes[0].nodeValue);
+		document.write("<br>");
+	}
+
+</script>
+</head>
+<body>
+
+</body>
+</html>
