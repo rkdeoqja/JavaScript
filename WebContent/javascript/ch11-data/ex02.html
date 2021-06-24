@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+function domTest(){
+	
+
+	var xmlDoc = null;
+
+	var x = null;
+
+	if (window.ActiveXObject) {
+		//IE용
+		xmlDoc = new ActiveXObject("Microsoft.XMLDOM");
+		xmlDoc.async = false;
+		xmlDoc.loadXML('myCompany.xml');
+	} else if (window.DOMParser) {
+		//safari.Chrome
+		var xhttp = new XMLHttpRequest();
+		xhttp.open('GET', 'myCompany.xml', false);
+		xhttp.send();
+		xmlDoc = xhttp.responseXML;
+	} else if (document.implementation.createDocument) {
+		//Mozilla, Firefox, Opera, 기타브라우저들
+		xmlDoc = document.implementation.createDocument('', '', null);
+		xmlDoc.async = false;
+		xmlDoc.load('myCompany.xml');
+	} else {
+		alert('XML을 사용 하지 못하는 브라우저입니다.');
+	}
+	
+	var root = xmlDoc.documentElement;
+	
+	var str = '';
+	str+='<br>'+ root.nodeName +"<br><br>";
+	
+	var members = root.getElementsByTagName("member");
+	
+	for(var i=0;i<members.length;i++){
+		var memberNode = members[i];
+		var part =memberNode.getElementsByTagName('part')[0].childNodes[0].nodeValue;
+				   
+		var name =memberNode.getElementsByTagName('name')[0].childNodes[0].nodeValue;
+		var teamno = memberNode.getElementsByTagName('teamno')[0].childNodes[0].nodeValue;
+		var cellphone = memberNode.getElementsByTagName('cellphone')[0].childNodes[0].nodeValue;
+		var birth = memberNode.getElementsByTagName('birth')[0].childNodes[0].nodeValue;
+		
+		str+= "부서: "+part+"<br>"+
+				"이름: "+name+"<br>"+
+				"팀번호: "+teamno+"<br>"+
+				"휴대폰: "+cellphone+"<br>"+
+				"탄생일: "+birth+"<br><br>";
+	}
+				
+	var divTag = document.getElementById('result');
+	divTag.innerHTML = str
+	
+}//domTest()
+
+</script>
+</head>
+<body>
+	DOM 테스트<input type="button" value="XML DOM" onclick="domTest()">
+	<div id="result"></div>
+
+</body>
+</html>
