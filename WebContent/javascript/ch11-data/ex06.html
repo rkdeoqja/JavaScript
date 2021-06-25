@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script type="text/javascript">
+window.onload = function(){
+	var date = new Date();
+	var str = date.toJSON();
+	
+	document.getElementById('json').innerHTML=date+"<br>";
+	document.getElementById('json').innerHTML+=str+'<br>';
+	
+	
+};
+</script>
+</head>
+<body>
+	<p id='json'></p>
+</body>
+</html>
