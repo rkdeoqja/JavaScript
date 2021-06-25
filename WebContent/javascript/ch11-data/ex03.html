@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+table, th,td{
+	border:1px solid black;
+	border-collapse:collapse;
+	
+}
+th{
+background-color:black;
+color:white;
+}
+</style>
+<script type="text/javascript">
+
+	function loadDoc(){
+		var xmlHttp = new XMLHttpRequest();
+		
+		xmlHttp.onreadystatechange= function(){
+			if(this.status==200 &&this.readyState==this.DONE){
+				displayData(xmlHttp);
+			}
+		};
+		
+		xmlHttp.open('get','korean_cities.xml',true);
+		xmlHttp.send();
+		
+	}//loadDoc()
+	
+	function displayData(xmlHttp){
+		
+		var	xmlObj = null;
+		var cityList =null;
+		var result =null;
+		var idx = null;
+		
+		
+		xmlObj = xmlHttp.responseXML
+		
+		result ="<table><tr><th>도시이름</th><th>행정구역</th></tr>";
+		cityList = xmlObj.getElementsByTagName('city');
+		for(idx =0;idx<cityList.length;idx++){
+			
+			result+="<tr><td>"
+			+cityList[idx].getElementsByTagName('name')[0].childNodes[0].nodeValue
+			+"</td><td>"
+			+cityList[idx].getElementsByTagName('class')[0].childNodes[0].nodeValue
+			+"</td></tr>";
+		}
+		
+		
+		result+="</table>";
+		
+		document.getElementById('text').innerHTML =result;
+		
+	}//displayData()
+	
+	
+
+</script>
+</head>
+<body>
+	<button onclick="loadDoc()">XML 데이터 불러오기</button>
+	<p id="text"></p>
+</body>
+</html>
