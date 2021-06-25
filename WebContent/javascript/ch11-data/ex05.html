@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script type="text/javascript">
+window.onload = function(){
+	
+	var data='{"name":"사과","kind":"부사","grade":1,"weight":2.3}';
+	
+	var fruit = JSON.parse(data);
+	
+	document.getElementById('json').innerHTML = fruit+'<br>';
+	
+	document.getElementById('json').innerHTML +=
+		fruit.name+", "+fruit.kind+", "+fruit.grade+", "+fruit.weight+"<br>";
+	
+}
+</script>
+</head>
+<body>
+	<p id='json'></p>
+</body>
+</html>
