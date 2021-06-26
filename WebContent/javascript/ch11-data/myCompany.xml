@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MyCompany>
+	<member>
+		<part>영업</part>
+		<name>잘팔아</name>
+		<teamno>1111</teamno>
+		<cellphone>01012123434</cellphone>
+		<birth>11/15</birth>	
+	</member>
+	<member>
+		<part>관리</part>
+		<name>최알뜰</name>
+		<teamno>2222</teamno>
+		<cellphone>01045456767</cellphone>
+		<birth>05/05</birth>	
+	</member>
+	<member>
+		<part>개발</part>
+		<name>김버그</name>
+		<teamno>3333</teamno>
+		<cellphone>01025253636</cellphone>
+		<birth>06/06</birth>	
+	</member>
+	<member>
+		<part>홍보</part>
+		<name>최고봉</name>
+		<teamno>4444</teamno>
+		<cellphone>01045124512</cellphone>
+		<birth>12/25</birth>	
+	</member>
+	
+</MyCompany>
+
+
+
+
+
